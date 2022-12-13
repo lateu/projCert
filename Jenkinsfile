@@ -4,10 +4,10 @@ pipeline {
         stage{
             steps{
                 echo("build docker image")
-                sh 'sudo docker build -t my-website.'
+                sh 'docker build -t webapp .'
 
                 echo("runing the container")
-                sh 'sudo docker run -itd -p 8080:80 my-website'
+                sh ' docker run -itd -p 80:80 webapp'
             }
         }
 
